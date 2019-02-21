@@ -1,0 +1,16 @@
+__pycache__*
+data/*
+data
+.vscode*
+*.pyc
+
+experiments/*
+!experiments/base_model
+!experiments/embedding_omni
+!experiments/embedding_mini
+experiments/base_model/*
+experiments/embedding_omni/*
+experiments/embedding_mini/*
+!experiments/base_model/params.json
+!experiments/embedding_omni/params.json
+!experiments/embedding_mini/params.json

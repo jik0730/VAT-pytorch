@@ -1,0 +1,17 @@
+{
+    "SEED": 1,
+    "alpha": 1,
+    "epsilon": 3,
+    "XI": 1e-6,
+    "n_power": 1,
+    "lr": 0.002,
+    "n_iters": 100000,
+    "n_labels": 100,
+    "n_val": 1000,
+    "nll_batch_size": 64,
+    "vat_batch_size": 256,
+    "n_summary_steps": 1000,
+    "decay_iter": 50000,
+    "decay_step_size": 10000,
+    "decay_gamma": 0.5
+}
