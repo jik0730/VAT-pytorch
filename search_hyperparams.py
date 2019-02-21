@@ -68,6 +68,8 @@ if __name__ == "__main__":
                 [args.parent_dir, args.data_dir, job_name, params])
 
     num_workers = 1
+    num_proc_per_worker = 3
+    max_proc = num_workers * num_proc_per_worker
     procs = []
     for count, proc_arg in enumerate(proc_args):
         gpu_num = count % num_workers
@@ -75,7 +77,7 @@ if __name__ == "__main__":
         procs.append(proc)
         proc.start()
 
-        if gpu_num == (num_workers - 1):
+        if (count + 1) % max_proc == 0 or (count + 1) == len(proc_args):
             for proc in procs:
                 proc.join()
             procs = []
